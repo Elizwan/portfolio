@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Widget</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #1964d6;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+
+      .weather-widget {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 300px;
+        width: 100%;
+      }
+
+      .weather-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .current-weather h1 {
+        color: #1e90ff;
+        margin: 10px 0;
+      }
+
+      .temp-range {
+        font-size: 24px;
+      }
+
+      .low-temp {
+        color: #555;
+      }
+
+      .high-temp {
+        color: #02060a;
+        font-weight: bold;
+      }
+
+      .forecast {
+        margin-top: 20px;
+      }
+
+      .forecast-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .forecast-icon {
+        font-size: 24px;
+      }
+
+      .day {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .change-city {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      .change-city:hover {
+        background-color: #1c86ee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-widget">
+      <div class="current-weather">
+        <img
+          src="https://via.placeholder.com/50"
+          alt="Weather Icon"
+          class="weather-icon"
+        />
+        <h1>Currently 21° in Tokyo</h1>
+        <p class="temp-range">
+          <span class="low-temp">13°</span> / <span class="high-temp">23°</span>
+        </p>
+      </div>
+      <div class="forecast">
+        <div class="forecast-item">
+          <span class="forecast-icon">🌧️</span>
+          <span class="day">Tomorrow</span>
+          <span class="temp-range">
+            <span class="low-temp">10°</span> /
+            <span class="high-temp">22°</span>
+          </span>
+        </div>
+        <div class="forecast-item">
+          <span class="forecast-icon">☁️</span>
+          <span class="day">Saturday</span>
+          <span class="temp-range">
+            <span class="low-temp">15°</span> /
+            <span class="high-temp">17°</span>
+          </span>
+        </div>
+        <div class="forecast-item">
+          <span class="forecast-icon">☀️</span>
+          <span class="day">Sunday</span>
+          <span class="temp-range">
+            <span class="low-temp">25°</span> /
+            <span class="high-temp">28°</span>
+          </span>
+        </div>
+      </div>
+      <button class="change-city">Change city</button>
+    </div>
+  </body>
+</html>

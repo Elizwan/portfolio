@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Class Manipulation</title>
+    <style>
+      .box {
+        background: rgb(17, 16, 16);
+        width: 1200px;
+        height: 1200px;
+      }
+
+      .black {
+        background: rgb(15, 15, 15);
+      }
+
+      .black {
+        background: rgb(189, 59, 59);
+      }
+
+      button {
+        margin: 20px;
+        font-size: 30px;
+        background-color: rgb(21, 21, 24);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <button>Dark theme</button>
+
+    <script>
+      function makeItBlack() {
+        let box = document.querySelector(".box");
+        box.classList.add("black");
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", makeItBlue);
+    </script>
+  </body>
+</html>
